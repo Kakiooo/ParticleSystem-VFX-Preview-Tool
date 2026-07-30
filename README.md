@@ -6,7 +6,8 @@ A Unity Editor tool for inspecting, isolating, and editing particle-system prefa
 Unity's Inspector shows a particle system's *modules* but gives you no self-contained way to preview a multi-emitter effect, isolate individual layers, or edit emitters side by side without opening the prefab in a scene. VFX Workbench fills that gap.
 
 <!-- Replace with a GIF of the tool in action -->
-![VFX Workbench in action](docs/demo.gif)
+![VFX Workbench in action](docs/demo.gif)<img width="400" height="225" alt="VFX_Tool" src="https://github.com/user-attachments/assets/5daf831c-4280-485d-9150-0d8dabfdcec8" />
+
 
 ## What it does
 
