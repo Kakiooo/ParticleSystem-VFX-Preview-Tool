@@ -19,11 +19,11 @@ Drop a particle-system prefab into the window and it breaks the effect down into
 
 ## How it works
 
-The preview rebuilds the effect from scratch every frame using `ParticleSystem.Simulate(t, withChildren, restart: true)`, driven by an editor-side clock. Because each frame is an independent, deterministic simulation to an absolute time `t`, the timeline scrubber can seek instantly to any point, and toggling an emitter is reflected on the very next frame — no mid-flight particle state to reconcile.
+The preview rebuilds the effect from scratch every frame using `ParticleSystem.Simulate(t, withChildren, restart: true)`, driven by an editor-side clock. Because each frame is an independent, deterministic simulation to an absolute time `t`, the timeline scrubber can seek instantly to any point, and toggling an emitter is reflected on the very next frame, no mid-flight particle state to reconcile.
 
 A few implementation details worth noting:
 
-- Rendering uses `PreviewRenderUtility` to draw the effect into an off-screen texture, which is then composited into the editor window — keeping the preview fully isolated from the user's scene.
+- Rendering uses `PreviewRenderUtility` to draw the effect into an off-screen texture, which is then composited into the editor window, keeping the preview fully isolated from the user's scene.
 - Random seeds are pinned (`useAutoRandomSeed = false`) on every child system so that a given `t` always produces an identical frame; without this, restarting the simulation each frame re-rolls randomness and the effect appears to drift.
 - The list/preview split is a custom draggable layout, and the embedded inspectors are created once and cached to avoid per-frame allocation.
 
