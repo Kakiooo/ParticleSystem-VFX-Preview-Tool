@@ -1,7 +1,7 @@
 # ParticleSystem-VFX-Preview-Tool
 # VFX Workbench
 
-A Unity Editor tool for inspecting, isolating, and editing particle-system prefabs from a single dockable window — then exporting your changes to a new prefab, non-destructively.
+A Unity Editor tool for inspecting, isolating, and editing particle-system prefabs from a single dockable window, then exporting your changes to a new prefab, non-destructively.
 
 Unity's Inspector shows a particle system's *modules* but gives you no self-contained way to preview a multi-emitter effect, isolate individual layers, or edit emitters side by side without opening the prefab in a scene. VFX Workbench fills that gap.
 
